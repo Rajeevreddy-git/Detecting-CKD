@@ -1,4 +1,4 @@
-# Detecting-CKD
+# Detecting-Chronic Kidney Disease
 
 ---
 
