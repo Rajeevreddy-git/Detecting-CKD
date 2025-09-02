@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Kidney Disease Awareness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #fffff1; /* Light yellow background */
+            color: #333;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, #0A3D62, #333333); /* Gradient header */
+            padding: 1.5em 2em;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        header .nav-buttons {
+            display: flex;
+            gap: 1.5em;
+        }
+
+        header .nav-button {
+            text-decoration: none;
+            font-weight: 500;
+            color: #fff;
+            padding: 0.8em 1.4em;
+            background-color: #0E2B34;
+            border-radius: 25px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+
+        header .nav-button:hover {
+            background-color: #02575D;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main content section */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4em 2em;
+            background-color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            margin-top: 3em;
+            border-radius: 15px;
+            margin: 2em auto;
+            width: 80%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .main-content:hover {
+            transform: translateY(-10px);
+        }
+
+        .main-content img {
+            width: 30%;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+            margin-bottom: 1.5em;
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1em;
+            color: #0F4B6E;
+        }
+
+        .main-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 2em;
+        }
+
+        .main-content a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333333;
+            padding: 1em 3em;
+            border-radius: 40px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .main-content a:hover {
+            background-color: #0F4B6E;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333333;
+            padding: 1.5em 0;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .main-content {
+                width: 95%;
+                padding: 2em 1em;
+            }
+
+            header .nav-buttons {
+                gap: 0.8em;
+            }
+
+            header .logo {
+                font-size: 1.6em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content h1 {
+                font-size: 2em;
+            }
+
+            .main-content p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Chronic Kidney Disease Awareness</div>
+        <div class="nav-buttons">
+            
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <img src="/static/images/s1.jpg" alt="Chronic Kidney Disease Awareness">
+        <h1>Understanding Chronic Kidney Disease</h1>
+        <p>Chronic Kidney Disease (CKD) is a long-term condition where the kidneys stop working properly. Early diagnosis and lifestyle changes can help manage symptoms and slow progression. Learn how to prevent and manage CKD with lifestyle changes, medication, and regular checkups.</p>
+        <a href="/login" class="button">Learn More</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Chronic Kidney Disease Awareness | All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Admin Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9; /* Light background color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      position: relative;
+    }
+
+    /* Navbar Styling */
+    header {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav-button {
+      font-size: 1em;
+      color: #3584de;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-button:hover {
+      color: #ff4d4d;
+    }
+
+    /* Login Container */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    /* Login Card */
+    .login-card {
+      background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+      padding: 2em 3em;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    /* Header Styling */
+    .login-header h2 {
+      font-size: 2em;
+      color: #3584de; /* Sea green color */
+      font-weight: 500;
+      margin-bottom: 1.5em;
+    }
+
+    /* Input Group */
+    .input-group {
+      margin-bottom: 1.5em;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: 500;
+      color: #3584de;
+      margin-bottom: 0.5em;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.8em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    .input-group input:focus {
+      border-color: #3584d3;
+    }
+
+    /* Error Message */
+    .error-message p {
+      color: #ff4d4d;
+      font-size: 0.9em;
+      margin-top: 1em;
+    }
+
+    /* Button Styling */
+    .login-btn {
+      width: 100%;
+      padding: 1em;
+      background-color: #3584de; /* Sea green */
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .login-btn:hover {
+      background-color: #2c8c7b; /* Darker sea green on hover */
+    }
+
+    /* Footer Styling (optional) */
+    .footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    .footer p {
+      margin-bottom: 0.5em;
+    }
+
+    /* Mobile Styling */
+    @media (max-width: 768px) {
+      .login-card {
+        padding: 1.5em;
+      }
+    }
+
+  </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="nav-buttons">
+            <a href="/" class="nav-button">Home</a>
+           
+        </div>
+    </header>
+
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h2>Admin Login</h2>
+      </div>
+      <form action="{{ url_for('login') }}" method="POST">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required placeholder="Enter your username">
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required placeholder="Enter your password">
+        </div>
+        <div class="error-message">
+          {% if error %}
+            <p>{{ error }}</p>
+          {% endif %}
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+      <div class="footer">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
